@@ -141,3 +141,18 @@
     align-self: end;
   }
 }
+
+/* ***************************** */
+/*          For Small Mobile     */
+/* ***************************** */
+
+@media (max-width: 400px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 330px) {
+  html {
+    font-size: 48%;
+  }
+}
