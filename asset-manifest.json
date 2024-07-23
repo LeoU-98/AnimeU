@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AnimeU/static/css/main.45a0908a.css",
+    "main.js": "/AnimeU/static/js/main.74b3bc2e.js",
+    "static/media/animeback.jpg": "/AnimeU/static/media/animeback.5ad675a2b315f08c088e.jpg",
+    "static/media/logo.jpg": "/AnimeU/static/media/logo.3acc682b98b734e95e46.jpg",
+    "index.html": "/AnimeU/index.html",
+    "main.45a0908a.css.map": "/AnimeU/static/css/main.45a0908a.css.map",
+    "main.74b3bc2e.js.map": "/AnimeU/static/js/main.74b3bc2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45a0908a.css",
+    "static/js/main.74b3bc2e.js"
+  ]
+}
