@@ -1,0 +1,130 @@
+.content-details-page {
+  padding-bottom: 3.6rem;
+}
+
+.content-details-container {
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: 2fr 3fr 3fr;
+  padding: 1.6rem;
+  column-gap: 0.8rem;
+  row-gap: 2.6rem;
+  width: 100%;
+  border-radius: 12px;
+  min-height: 63rem;
+}
+
+.item-poster-box {
+  grid-row: 1 / span 2;
+  grid-column: 3;
+  border-radius: 16px;
+  overflow: hidden;
+  max-height: 60rem;
+}
+
+.item-poster-img {
+  height: 100%;
+  width: 100%;
+}
+
+.aside-item-box {
+  padding: 1.6rem;
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  border-radius: 14px;
+}
+
+/* *************************** */
+/* Status Box */
+/* *************************** */
+
+.status-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 1.6rem;
+  grid-row: 1;
+  grid-column: 2;
+  gap: 2.6rem;
+  align-self: start;
+  border-radius: 14px;
+}
+.status-item-score-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.status-item-score-box::before {
+  content: "Score";
+  display: block;
+  background-color: #fab005;
+  color: white;
+  border-radius: 14px;
+  text-align: center;
+  padding: 0.1rem 1rem;
+}
+
+.status-item-type {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.status-item-value {
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+/* *************************** */
+/* Description */
+/* *************************** */
+
+.item-description {
+  align-self: start;
+  grid-row: 2;
+  grid-column: 2;
+  padding: 1.6rem;
+  text-align: left;
+  line-height: 1.2;
+  border-radius: 16px;
+}
+
+/* *************************** */
+/* back-btn */
+/* *************************** */
+
+.back-btn-box {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  transition: transform 0.3s;
+}
+
+.back-btn-box:hover {
+  transform: scale(1.1);
+}
+
+.back-btn {
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  border: none;
+}
+
+.back-btn-svg {
+  cursor: pointer;
+  display: block;
+  fill: black;
+}
+
+.back-btn-box:hover .back-btn-svg {
+  fill: white;
+}
