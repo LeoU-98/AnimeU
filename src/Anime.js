@@ -4,14 +4,33 @@ import Content from "./features/list/Content";
 import AnimeDetails from "./features/info/AnimeDetails";
 import { ControlBar } from "./features/list/ControlBar";
 import Card from "./features/list/Card";
-import useFetch from "./hooks/useFetch";
 import Loader from "./ui/Loader";
+import { useQuery } from "@tanstack/react-query";
+
+async function getData(query) {
+  let res;
+  if (query !== "") {
+    res = await fetch(`https://api.jikan.moe/v4/anime?q=${query}&sfw=true`);
+  } else {
+    res = await fetch(`https://api.jikan.moe/v4/anime?q&sfw=true`);
+  }
+
+  if (!res.ok) {
+    throw new Error("Response Was not Okay");
+  }
+
+  const data = await res.json();
+  return data;
+}
 
 export default function Anime() {
   const [chosen, setChosen] = useState({});
   const [isBack, setIsBack] = useState(true);
-  const [query, setQuery, displayedData, setDisplayedData, isLoading] =
-    useFetch();
+  const [query, setQuery] = useState("");
+  const { isLoading, data } = useQuery({
+    queryKey: ["animeData", query],
+    queryFn: () => getData(query),
+  });
 
   function handleIsBack() {
     setIsBack((isBack) => !isBack);
@@ -31,21 +50,17 @@ export default function Anime() {
     setIsBack(true);
     switch (sortType) {
       case "name":
-        setDisplayedData((result) =>
-          result.slice().sort((a, b) => a.title.localeCompare(b.title))
-        );
+        data?.data?.result
+          .slice()
+          .sort((a, b) => a.title.localeCompare(b.title));
         break;
       case "epi":
-        setDisplayedData((result) =>
-          result.slice().sort((a, b) => a?.episodes - b?.episodes)
-        );
+        data?.data?.result.slice().sort((a, b) => a?.episodes - b?.episodes);
         break;
       default:
         console.log("something Went Wrong");
     }
   }
-
-  console.log(isLoading);
 
   return (
     <div className="anime">
@@ -55,7 +70,7 @@ export default function Anime() {
           {isLoading ? (
             <Loader />
           ) : (
-            displayedData?.map((el) => (
+            data?.data?.map((el) => (
               <Card animeData={el} onChoice={handleChoice} />
             ))
           )}

@@ -12,6 +12,7 @@ export default function AnimeDetails({ chosenAnime, onBack }) {
     <div className="content-details-page">
       <BackButton onBack={onBack} />
       <div className="content-details-container glass">
+        <div className="overlay"></div>
         <Poster chosenAnime={chosenAnime} />
         <Aside chosenAnime={chosenAnime} />
         <Status chosenAnime={chosenAnime} />
