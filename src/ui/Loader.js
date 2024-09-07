@@ -1,4 +1,4 @@
-import "./Loader.css";
+import "../Styles/Loader.css";
 function Loader() {
   return (
     <div className="loader-box">

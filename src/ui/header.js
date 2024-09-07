@@ -1,4 +1,4 @@
-import "./header.css";
+import "../Styles/Header.css";
 import logo from "../images/logo.jpg";
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
         <div className="logo-img-box">
           <img src={logo} alt="logo" className="logo-img"></img>
         </div>
-        <p className="logo-title">AnimeU</p>
+        <h1 className="logo-title">AnimeU</h1>
       </div>
     </header>
   );
