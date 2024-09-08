@@ -22,10 +22,11 @@ export default function ControlBar() {
         />
       </form>
       <div className="sort-box glass">
-        <label htmlFor="sort-box-label">Sort by</label>
+        <label htmlFor="sort">Sort by</label>
         <select
-          id="sort-box-select"
-          className="glass"
+          id="sort"
+          name="sort"
+          className="glass sort-box-select"
           onChange={(e) => handleSort(e.target.value)}
         >
           <option value="name">Name</option>

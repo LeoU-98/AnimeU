@@ -13,6 +13,7 @@
   width: 100%;
   border-radius: 12px;
   min-height: 63rem;
+  margin-top: 1.6rem;
 }
 
 .overlay {
@@ -21,6 +22,7 @@
   opacity: 30%;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 .item-poster-box {
@@ -113,7 +115,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.6rem;
+  margin-top: 3.2rem;
   transition: transform 0.3s;
 }
 
@@ -205,34 +207,5 @@
 
   .content-details-page .back-btn-box {
     margin-left: 1.2rem;
-  }
-}
-
-/* ***************************** */
-/*          Control Bar          */
-/* ***************************** */
-
-@media (max-width: 768px) {
-  .anime .control-bar {
-    flex-direction: column;
-    gap: 1.6rem;
-  }
-
-  .control-bar .search-form {
-    width: 80%;
-  }
-
-  .control-bar #search-input-field {
-    width: 100%;
-    height: 4.8rem;
-    border-radius: 36px;
-  }
-
-  .control-bar .sort-box #sort-box-select {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: -1px 2px 0px 1px rgba(255, 255, 255, 0.6);
-  }
-  .control-bar .sort-box {
-    align-self: end;
   }
 }

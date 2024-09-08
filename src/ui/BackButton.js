@@ -3,11 +3,9 @@ import { useNavigate } from "react-router-dom";
 function BackButton() {
   const navigate = useNavigate();
 
-  console.log(navigate);
-
   return (
     <div className="back-btn-box glass">
-      <button className="back-btn">
+      <button className="back-btn" onClick={() => navigate(-1)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 256 256"

@@ -1,11 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Card({ animeData, onChoice }) {
+  const navigate = useNavigate();
+  function handleCardClick() {
+    onChoice(animeData);
+    navigate("/AnimeInfo");
+  }
   return (
-    <NavLink
+    <article
       to="AnimeInfo"
       className="card-content glass"
-      onClick={() => onChoice(animeData)}
+      onClick={handleCardClick}
     >
       <div className="card-img-box">
         <img
@@ -17,6 +22,6 @@ export default function Card({ animeData, onChoice }) {
       <h2 className="card-title">
         {animeData?.title.split(" ").slice(0, 3).join(" ")}
       </h2>
-    </NavLink>
+    </article>
   );
 }

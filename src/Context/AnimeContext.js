@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { createContext } from "react";
-import { useNavigate } from "react-router-dom";
 
 async function getData(query) {
   let res;
@@ -23,33 +22,21 @@ const AnimeContext = createContext("animeContext");
 
 export default function AnimeProvider({ children }) {
   const [chosen, setChosen] = useState({});
-  const [isBack, setIsBack] = useState(true);
   const [query, setQuery] = useState("");
   const { isLoading, data } = useQuery({
     queryKey: ["animeData", query],
     queryFn: () => getData(query),
   });
 
-  //   const navigate = useNavigate();
-
-  //   console.log(navigate);
-
-  function handleIsBack() {
-    setIsBack((isBack) => !isBack);
-  }
-
   function handleSearch(queryValue) {
-    setIsBack(true);
     setQuery(queryValue);
   }
 
   function handleChoice(chosenAnime) {
     setChosen(chosenAnime);
-    handleIsBack();
   }
 
   function handleSort(sortType) {
-    setIsBack(true);
     switch (sortType) {
       case "name":
         data?.data?.result
@@ -71,7 +58,7 @@ export default function AnimeProvider({ children }) {
     query,
     isLoading,
     data,
-    handleIsBack,
+
     chosen,
   };
 
