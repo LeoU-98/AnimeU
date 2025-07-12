@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AnimeU/static/css/main.91bd4702.css",
-    "main.js": "/AnimeU/static/js/main.14c5932e.js",
+    "main.css": "/AnimeU/static/css/main.62a08fc3.css",
+    "main.js": "/AnimeU/static/js/main.29fd1f42.js",
     "static/media/animeback.jpg": "/AnimeU/static/media/animeback.5ad675a2b315f08c088e.jpg",
-    "static/media/logo.jpg": "/AnimeU/static/media/logo.3acc682b98b734e95e46.jpg",
+    "static/media/logo.png": "/AnimeU/static/media/logo.e1e50ac5680fc7f1e429.png",
     "index.html": "/AnimeU/index.html",
-    "main.91bd4702.css.map": "/AnimeU/static/css/main.91bd4702.css.map",
-    "main.14c5932e.js.map": "/AnimeU/static/js/main.14c5932e.js.map"
+    "main.62a08fc3.css.map": "/AnimeU/static/css/main.62a08fc3.css.map",
+    "main.29fd1f42.js.map": "/AnimeU/static/js/main.29fd1f42.js.map"
   },
   "entrypoints": [
-    "static/css/main.91bd4702.css",
-    "static/js/main.14c5932e.js"
+    "static/css/main.62a08fc3.css",
+    "static/js/main.29fd1f42.js"
   ]
 }
