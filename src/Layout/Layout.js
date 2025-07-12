@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 
 import { useAnime } from "../Context/AnimeContext";
 import ReactPaginate from "react-paginate";
-import Header from "../ui/Header";
+import Header from "./Header";
 
 function Layout() {
   const { lastPage, currentPage, handlePageClick } = useAnime();
