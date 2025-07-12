@@ -64,6 +64,7 @@
   align-self: start;
   border-radius: 14px;
 }
+
 .status-item-score-box {
   display: flex;
   flex-direction: column;
@@ -190,6 +191,7 @@
     width: 90vw;
     order: 4;
   }
+
   .content-details-container .status-box {
     width: 90vw;
     font-size: 1.2rem;
@@ -207,5 +209,9 @@
 
   .content-details-page .back-btn-box {
     margin-left: 1.2rem;
+  }
+
+  .content-details-page .overlay {
+    display: none;
   }
 }
