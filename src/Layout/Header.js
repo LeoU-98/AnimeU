@@ -5,7 +5,7 @@ import logo from "../images/logo.png";
 export default function Header() {
   return (
     <header className="main-header">
-      <Link to="./AnimeU" className="logo">
+      <Link to="./" className="logo">
         <div className="logo-img-box">
           <img src={logo} alt="logo" className="logo-img"></img>
         </div>
