@@ -13,7 +13,6 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "AnimeU",
         element: <AnimeContainer />,
       },
       { path: "AnimeInfo", element: <AnimeDetails /> },
